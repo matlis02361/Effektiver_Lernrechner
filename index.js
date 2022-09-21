@@ -63,18 +63,18 @@ lernRechner = () => {
   if (parameter.praxisToLernnZeit >= 0.75 &&  parameter.praxisToLernnZeit <= 0.85){
  parameter.lernEffizienz = 100
   } else if (parameter.praxisToLernnZeit < 0.75 || parameter.praxisToLernnZeit > 0.85){
-  parameter.lernEffizienz = 100 - (Math.abs(0.8 - parameter.praxisToLernnZeit))*100 }
+  parameter.lernEffizienz = 100 - (Math.abs(0.8 - parameter.praxisToLernnZeit))*parameter.konzentration }
 };
 
 //lernRechner(zeit,Tätigkeit)
 //             45, Theorie
 
 theorieRechner(1)
-praxisRechner(10)
+praxisRechner(100)
 lernRechner();
 console.log(parameter);
 
-theorieRechner(20)
+theorieRechner(45)
 praxisRechner(80)
 lernRechner();
 console.log(parameter);
