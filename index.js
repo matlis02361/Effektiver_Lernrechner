@@ -17,7 +17,7 @@ lernRechner = (zeit, Tätigkeit) => {
 
   for (let index = 0; index < zeit; index += 5) {
     if (index >= 25) {
-      parameter.konzentration -= 0.005 * parameter.konzentration;
+      parameter.konzentration -= 0.015 * parameter.konzentration;
     }
     if (index >= 25 && index <= 30) {
       parameter.konzentration -= 0.01 * parameter.konzentration;
@@ -56,22 +56,23 @@ pauseRechner = (zeit) => {
   }
   parameter.konzentration = Math.round(parameter.konzentration);
 };
-lernRechner(20,"Theorie")
-pauseRechner(10)
-lernRechner(20,"Theorie")
+lernRechner(20, "Theorie");
+pauseRechner(5);
+lernRechner(29, "Praxis");
+console.log(parameter)
 
 /* ,`,`,`,`,`,`,`,`,`,`,`,`INPUT,`,`,`,`,`,`,`,`,`,`,`,`,`,`,`,`,`,`,`,`,`,`,`,` */
 
-document.write(`<select class="form-select" aria-label="Default select example">
+/* document.write(`<select class="form-select" aria-label="Default select example">
 <option selected>Open this select menu</option>
 <option value="1">One</option>
 <option value="2">Two</option>
 <option value="3">Three</option>
 </select>`);
-
+ */
 /* :::::::::::::TABELE:::::::::::::::::::::::: */
 
-document.write(`<table class="table">
+/* document.write(`<table class="table">
 <thead>
   <tr>
     <th scope="col">#</th>
@@ -118,3 +119,4 @@ document.write(`<table class="table">
   </tr>
 </tbody>
 </table>`);
+ */
